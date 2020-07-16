@@ -19,9 +19,9 @@
 // 👍 629 👎 0
 
 
-package leetcode.editor.cn;
+package org.xbp.algorithm.leetcode.editor.cn;
 //Java：跳跃游戏 II
-public class P45JumpGameIi{
+ class P45JumpGameIi{
     public static void main(String[] args) {
         Solution solution = new P45JumpGameIi().new Solution();
         // TO TEST

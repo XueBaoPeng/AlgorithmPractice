@@ -21,9 +21,9 @@
 // 👍 740 👎 0
 
 
-package leetcode.editor.cn;
+package org.xbp.algorithm.leetcode.editor.cn;
 //Java：跳跃游戏
-public class P55JumpGame{
+ class P55JumpGame{
     public static void main(String[] args) {
         Solution solution = new P55JumpGame().new Solution();
         // TO TEST

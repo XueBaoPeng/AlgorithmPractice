@@ -21,7 +21,7 @@
 
 package org.xbp.algorithm.leetcode.editor.cn;
 //Java：盛最多水的容器
-public class P11ContainerWithMostWater{
+ class P11ContainerWithMostWater{
     public static void main(String[] args) {
         Solution solution = new P11ContainerWithMostWater().new Solution();
         // TO TEST
