@@ -2,10 +2,12 @@ package org.xbp.algorithm.category.链表.single;
 
 import org.xbp.algorithm.category.链表.AbstractList;
 
+/**
+ * 单链表
+ * @param <E>
+ */
 public class SingleLinkedList<E> extends AbstractList<E> {
-
     private SingleLinkedList.Node<E> first;
-
 
     @Override
     public void clear() {
@@ -28,7 +30,7 @@ public class SingleLinkedList<E> extends AbstractList<E> {
     @Override
     public void add(int index, E element) {
         rangeCheckForAdd(index);
-        if(index==0){
+        if(index==0){// 给空链表添加第一个元素的情况
             this.first = new SingleLinkedList.Node(element, this.first);
         }else {
             Node<E> prev=this.node(index-1);
@@ -41,12 +43,12 @@ public class SingleLinkedList<E> extends AbstractList<E> {
     public E remove(int index) {
         this.rangeCheck(index);
         SingleLinkedList.Node<E> node=first;
-        if(index==0){
+        if(index==0){// 删除第一个元素是特殊情况
             first=first.next;
         }else {
-            SingleLinkedList.Node<E> prev = this.node(index - 1);
-            node=prev.next;
-            prev.next=node.next;
+            SingleLinkedList.Node<E> prev = this.node(index - 1);// 找到前一个元素
+            node=prev.next;// 要删除的元素
+            prev.next=node.next;// 删除元素
         }
         size--;
         return node.element;
@@ -86,7 +88,7 @@ public class SingleLinkedList<E> extends AbstractList<E> {
         }
         return  node;
     }
-
+    // 链表中的节点
     private static class Node<E> {
         E element;
         SingleLinkedList.Node<E> next;
@@ -96,4 +98,21 @@ public class SingleLinkedList<E> extends AbstractList<E> {
             this.next = next;
         }
     }
+
+    @Override
+    public String toString() {
+        StringBuilder string = new StringBuilder();
+        string.append("[size=").append(size).append(", ");
+        Node<E> node = first;
+        for (int i = 0; i < size; i++) {
+            if (i != 0) {
+                string.append(", ");
+            }
+            string.append(node.element);
+            node = node.next;
+        }
+        string.append("]");
+        return string.toString();
+    }
+
 }
