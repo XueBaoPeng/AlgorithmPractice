@@ -1,6 +1,9 @@
 package org.xbp.algorithm.category.链表;
 
+import org.xbp.algorithm.category.链表.circle.CircleLinkedList;
+import org.xbp.algorithm.category.链表.circle.SingleCircleLinkedList;
 import org.xbp.algorithm.category.链表.single.SingleLinkedList;
+import org.xbp.algorithm.category.链表.single.SingleLinkedList2;
 
 /**
  * Created on 2021/8/23.
@@ -13,9 +16,11 @@ public class Main {
     public static void main(String[] args) {
 //		testList(new ArrayList<>());  // 动态数组
 //		testList(new LinkedList<Integer>()); // 双向链表
-//		testList(new SingleCircleLinkedList<>()); // 单向循环链表
-//        testList(new CircleLinkedList<>());
-       testList(new SingleLinkedList<Integer>());
+//		testList(new SingleCircleLinkedList<Integer>()); // 单向循环链表
+        testList(new CircleLinkedList<Integer>());
+//       testList(new SingleLinkedList<Integer>());//单链表
+//       testList(new SingleLinkedList2<Integer>());//有虚拟头结点的单链表
+
     }
 
     static void testList(List<Integer> list){
